@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+</head>
+
+<body>
+  <div id="password-box">
+    <h2>Gerador de Senhas Simples</h2>
+
+    <label for="length">Comprimento:</label>
+    <input type="number" id="length" min="4" max="30" value="12">
+
+    <label for="strength">Força:</label>
+    <select id="strength">
+      <option value="weak">Fraca</option>
+      <option value="medium">Média</option>
+      <option value="strong">Forte</option>
+    </select>
+    
+    <input type="checkbox" id="includeSymbols">
+    <label for="includeSymbols">Incluir Símbolos</label>
+
+    <input type="checkbox" id="includeNumbers">
+    <label for="includeNumbers">Incluir Números</label>
+    <br>
+    <br>
+    <button onclick="generatePassword()">Gerar Senha</button>
+
+    <div id="password-container">
+      <label for="password-input">Senha:</label>
+      <input type="text" id="password-input" readonly>
+      <button id="reset-button" onclick="resetPassword()"><i class="fas fa-redo"></i></button>
+    </div>
+  </div>
+
+</body>
+</html>
